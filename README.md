@@ -133,8 +133,8 @@ Every workspace-owned resource is scoped by `workspaceId`, which keeps data sepa
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/thribhuvan003/workspace-flow-.git
-cd workspace-flow-
+git clone https://github.com/thribhuvan003/workspace-flow.git
+cd workspace-flow
 npm install
 ```
 
