@@ -166,17 +166,14 @@ GEMINI_API_KEY=""
 RESEND_API_KEY=""
 ```
 
-Generate `AUTH_SECRET` with:
+Generate `AUTH_SECRET` with Node.js on Windows, macOS, or Linux:
 
 ```bash
-openssl rand -base64 32
+node -e "console.log(require('node:crypto').randomBytes(32).toString('base64'))"
 ```
 
-On Windows without OpenSSL, use:
-
-```powershell
-[Convert]::ToBase64String((1..32 | ForEach-Object { Get-Random -Maximum 256 }))
-```
+Copy the output into `AUTH_SECRET`. This uses a cryptographically secure random
+generator and does not require OpenSSL.
 
 ### 3. Prepare the database
 
